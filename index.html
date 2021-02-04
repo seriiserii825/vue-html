@@ -22,9 +22,9 @@
                 </li>
             </ul>
             <div>
-                <button class="btn" :disabled="isPrevButtonActive" v-if="!isLastItem">Назад</button>
-                <button class="btn primary" v-if="!isLastItem">Вперед</button>
-                <button class="btn" v-if="isLastItem">Начать заного</button>
+                <button @click="prev" class="btn" :disabled="isPrevButtonActive" v-if="!isLastItem">Назад</button>
+                <button @click="nextOfFinish" class="btn primary" v-if="!isLastItem">Вперед</button>
+                <button class="btn" v-if="isLastItem" @click="reset">Начать заного</button>
             </div>
         </div>
     </div>
